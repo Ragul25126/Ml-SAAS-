@@ -7,239 +7,134 @@ export function renderDashboard(container) {
     <!-- Hero header -->
 
     <div class="page-header" style="
-
-      background: linear-gradient(135deg, rgba(255,255,255,0.07) 0%, rgba(212,212,216,0.04) 50%, transparent 100%);
-
+      background: linear-gradient(135deg, rgba(0,255,157,0.08) 0%, rgba(212,212,216,0.04) 50%, transparent 100%);
       border: 1px solid rgba(255,255,255,0.1);
-
       border-radius: 20px;
-
-      padding: 32px 36px;
-
+      padding: 36px 40px;
       margin-bottom: 28px;
-
       position: relative;
-
       overflow: hidden;
-
     ">
-
       <!-- decorative orbs -->
-
       <div style="
-
         position:absolute; top:-40px; right:-40px;
-
-        width:200px; height:200px;
-
-        background: radial-gradient(circle, rgba(255,255,255,0.12), transparent 70%);
-
+        width:240px; height:240px;
+        background: radial-gradient(circle, rgba(0,255,157,0.15), transparent 70%);
         border-radius:50%; pointer-events:none;
-
       "></div>
-
       <div style="
-
         position:absolute; bottom:-30px; right:120px;
-
-        width:140px; height:140px;
-
-        background: radial-gradient(circle, rgba(212,212,216,0.08), transparent 70%);
-
+        width:160px; height:160px;
+        background: radial-gradient(circle, rgba(0,255,157,0.1), transparent 70%);
         border-radius:50%; pointer-events:none;
-
       "></div>
-
-
 
       <div class="page-eyebrow" style="
-
-        font-size:0.67rem; font-weight:700; color:#ffffff;
-
+        font-size:0.67rem; font-weight:700; color:var(--accent-emerald);
         text-transform:uppercase; letter-spacing:0.14em;
-
-        display:flex; align-items:center; gap:8px; margin-bottom:10px;
-
+        display:flex; align-items:center; gap:8px; margin-bottom:12px;
       ">
-
-        <span style="display:inline-block;width:20px;height:2px;background:#ffffff;border-radius:2px;"></span>
-
+        <span style="display:inline-block;width:24px;height:2px;background:var(--accent-emerald);border-radius:2px;"></span>
         Welcome back, Learner 👋
-
       </div>
 
       <h2 style="
-
-        font-size:2rem; font-weight:800; letter-spacing:-0.04em;
-
-        margin-bottom:10px; line-height:1.15;
-
-        background: linear-gradient(120deg, #fff 0%, #72e3ad 100%);
-
+        font-size:2.4rem; font-weight:800; letter-spacing:-0.04em;
+        margin-bottom:12px; line-height:1.1;
+        background: linear-gradient(120deg, #fff 30%, var(--accent-emerald) 100%);
         -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-
         background-clip: text;
-
       ">ML Visualization Lab</h2>
 
-      <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.7;max-width:540px;margin-bottom:22px;">
-
+      <p style="color:var(--text-secondary);font-size:0.98rem;line-height:1.7;max-width:540px;margin-bottom:26px;">
         Learn machine learning through interactive visualizations. Pick an algorithm, adjust parameters, and watch the magic happen in real-time.
-
       </p>
 
-      <div style="display:flex;gap:10px;flex-wrap:wrap;">
-
-        <button class="btn btn-primary btn-pill" onclick="window.__app.navigate('linear-regression')">
-
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <button class="btn btn-primary btn-pill" onclick="window.__app.navigate('linear-regression')" style="padding: 10px 24px;">
           🚀 Start Learning
-
         </button>
-
-        <button class="btn btn-secondary btn-pill" onclick="window.__app.navigate('data-playground')">
-
+        <button class="btn btn-secondary btn-pill" onclick="window.__app.navigate('data-playground')" style="padding: 10px 24px;">
           🔬 Open Playground
-
         </button>
-
       </div>
-
     </div>
-
-
 
     <!-- Stat Cards -->
-
     <div class="dashboard-grid" style="margin-bottom:32px;">
-
-      <div class="glass-card stat-card" style="padding:20px;">
-
-        <div class="stat-icon blue" style="font-size:1.25rem;">📊</div>
-
+      <div class="glass-card stat-card">
+        <div class="stat-icon blue">📊</div>
         <div class="stat-content">
-
           <h4 class="stat-num" data-target="5">0</h4>
-
           <p>Interactive Algorithms</p>
-
         </div>
-
         <div class="stat-trend up">+2 new</div>
-
       </div>
 
-      <div class="glass-card stat-card" style="padding:20px;">
-
-        <div class="stat-icon emerald" style="font-size:1.25rem;">🧫</div>
-
+      <div class="glass-card stat-card">
+        <div class="stat-icon emerald">🌎</div>
         <div class="stat-content">
-
           <h4 class="stat-num" data-target="6">0</h4>
-
           <p>Sample Datasets</p>
-
         </div>
-
         <div class="stat-trend up">+1 new</div>
-
       </div>
 
-      <div class="glass-card stat-card" style="padding:20px;">
-
-        <div class="stat-icon amber" style="font-size:1.25rem;">⚡</div>
-
+      <div class="glass-card stat-card">
+        <div class="stat-icon amber">⚡</div>
         <div class="stat-content">
-
-          <h4 style="font-size:1.25rem;font-weight:800;letter-spacing:-0.03em;margin-bottom:4px;">Real-Time</h4>
-
+          <h4 style="font-size:1.4rem;font-weight:800;letter-spacing:-0.03em;margin-bottom:4px;">Real-Time</h4>
           <p>In-Browser Training</p>
-
         </div>
-
       </div>
 
-      <div class="glass-card stat-card" style="padding:20px;">
-
-        <div class="stat-icon violet" style="font-size:1.25rem;">💡</div>
-
+      <div class="glass-card stat-card">
+        <div class="stat-icon violet">💡</div>
         <div class="stat-content">
-
-          <h4 style="font-size:1.25rem;font-weight:800;letter-spacing:-0.03em;margin-bottom:4px;">Visual</h4>
-
+          <h4 style="font-size:1.4rem;font-weight:800;letter-spacing:-0.03em;margin-bottom:4px;">Visual</h4>
           <p>Step-by-Step Explanations</p>
-
         </div>
-
       </div>
-
     </div>
 
 
 
-    <!-- Your Progress strip -->
-
-    <div class="glass-card" style="margin-bottom:28px;padding:20px 24px;">
-
-      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
-
+    <div class="glass-card" style="margin-bottom:28px;padding:24px 28px; border-left: 4px solid var(--accent-emerald);">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;">
         <div>
-
-          <div style="font-size:0.9rem;font-weight:700;letter-spacing:-0.02em;">Your Progress</div>
-
-          <div style="font-size:0.75rem;color:var(--text-muted);margin-top:2px;">0 of 5 modules completed</div>
-
+          <div style="font-size:0.95rem;font-weight:800;letter-spacing:-0.02em;">Your Progress</div>
+          <div style="font-size:0.78rem;color:var(--text-muted);margin-top:2px;">0 of 5 modules completed</div>
         </div>
-
-        <span class="tag tag-blue">0%</span>
-
+        <span class="tag tag-emerald" style="padding: 4px 12px; font-size: 0.75rem;">0%</span>
       </div>
 
-      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:8px;">
-
+      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:12px;">
         ${['Linear Regression','K-Means','Decision Trees','Neural Nets','SVM'].map((mod, i) => `
-
           <div>
-
-            <div style="font-size:0.68rem;color:var(--text-muted);margin-bottom:6px;text-align:center;">${mod}</div>
-
-            <div class="progress-bar">
-
-              <div class="progress-fill" style="width:0%;background:${['var(--gradient-primary)','var(--gradient-success)','var(--gradient-warm)','linear-gradient(135deg,#34d399,#d4d4d8)','var(--gradient-cool)'][i]}"></div>
-
+            <div style="font-size:0.7rem;color:var(--text-secondary);font-weight:600;margin-bottom:8px;text-align:center;">${mod}</div>
+            <div class="progress-bar" style="height: 6px; background: rgba(255,255,255,0.04);">
+              <div class="progress-fill" style="width:0%;background:${['var(--accent-emerald)','var(--gradient-success)','var(--gradient-warm)','linear-gradient(135deg,#34d399,#d4d4d8)','var(--gradient-cool)'][i]}"></div>
             </div>
-
           </div>
-
         `).join('')}
-
       </div>
-
     </div>
 
 
 
-    <!-- Section header for courses -->
-
-    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;">
-
+    <div style="display:flex;align-items:center;justify-content:space-between;margin: 40px 0 20px;">
       <div>
-
-        <h3 style="font-size:1.05rem;font-weight:700;letter-spacing:-0.02em;">📚 Course Modules</h3>
-
-        <p style="font-size:0.78rem;color:var(--text-muted);margin-top:3px;">Start your ML journey from the basics and work your way up</p>
-
+        <h3 style="font-size:1.2rem;font-weight:800;letter-spacing:-0.02em;display:flex;align-items:center;gap:10px;">
+          <span style="font-size:1.4rem;">📚</span> Course Modules
+        </h3>
+        <p style="font-size:0.82rem;color:var(--text-muted);margin-top:4px;">Start your ML journey from the basics and work your way up</p>
       </div>
 
-      <div style="display:flex;gap:6px;">
-
-        <button class="btn btn-secondary" style="font-size:0.75rem;padding:6px 12px;" id="filter-all">All</button>
-
-        <button class="btn btn-secondary" style="font-size:0.75rem;padding:6px 12px;" id="filter-beginner">Beginner</button>
-
-        <button class="btn btn-secondary" style="font-size:0.75rem;padding:6px 12px;" id="filter-advanced">Advanced</button>
-
+      <div style="display:flex;gap:8px;">
+        <button class="btn btn-secondary" style="font-size:0.75rem;padding:7px 16px;border-radius:20px;" id="filter-all">All</button>
+        <button class="btn btn-secondary" style="font-size:0.75rem;padding:7px 16px;border-radius:20px;" id="filter-beginner">Beginner</button>
+        <button class="btn btn-secondary" style="font-size:0.75rem;padding:7px 16px;border-radius:20px;" id="filter-advanced">Advanced</button>
       </div>
-
     </div>
 
 
@@ -668,11 +563,9 @@ function drawPreviewLR() {
 
     ctx.arc(x, y, 4, 0, Math.PI * 2);
 
-    ctx.fillStyle = 'rgba(114,227,173,0.85)';
-
+    ctx.fillStyle = '#00ff9d'; // Emerald
     ctx.fill();
-
-    ctx.strokeStyle = 'rgba(255,255,255,0.25)';
+    ctx.strokeStyle = 'rgba(255,255,255,0.4)';
 
     ctx.lineWidth = 1;
 
@@ -683,12 +576,9 @@ function drawPreviewLR() {
 
 
   // Regression line
-
-  ctx.strokeStyle = 'rgba(114,227,173,0.95)';
-
-  ctx.lineWidth = 2.5;
-
-  ctx.shadowColor = 'rgba(255,255,255,0.5)';
+  ctx.strokeStyle = '#00ff9d'; // Emerald
+  ctx.lineWidth = 3;
+  ctx.shadowColor = 'rgba(0, 255, 157, 0.4)';
 
   ctx.shadowBlur = 8;
 
@@ -720,11 +610,9 @@ function drawPreviewKM() {
 
   const colors = [
 
-    { fill: 'rgba(161,161,170,0.7)',  glow: 'rgba(161,161,170,0.5)' },
-
-    { fill: 'rgba(255,255,255,0.7)',  glow: 'rgba(255,255,255,0.5)' },
-
-    { fill: 'rgba(245,158,11,0.7)',  glow: 'rgba(245,158,11,0.5)' },
+    { fill: 'rgba(0, 255, 157, 0.7)',  glow: 'rgba(0, 255, 157, 0.5)' },
+    { fill: 'rgba(251, 191, 36, 0.7)',  glow: 'rgba(251, 191, 36, 0.5)' },
+    { fill: 'rgba(244, 63, 94, 0.7)',  glow: 'rgba(244, 63, 94, 0.5)' },
 
   ];
 
