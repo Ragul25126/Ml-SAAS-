@@ -24,7 +24,7 @@ export function renderLinearRegression(container) {
 
     <div class="page-header">
 
-      <span class="lesson-number">Lesson 1 — Regression</span>
+      <span class="lesson-number">Algorithm — Linear Regression</span>
 
       <h2>Linear Regression</h2>
 

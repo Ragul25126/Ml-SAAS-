@@ -78,7 +78,7 @@ export function renderExplainers(container) {
 
       <div class="glass-card">
 
-        <div class="glass-card-header"><h3>â¡ Learning Rate Explorer</h3></div>
+        <div class="glass-card-header"><h3>⚡ Learning Rate Explorer</h3></div>
 
         <p style="color:var(--text-secondary);font-size:0.88rem;line-height:1.7;margin-bottom:16px;">
 

@@ -7,6 +7,17 @@ import { renderNeuralNetwork } from './pages/neuralNetwork.js';
 import { renderSVM } from './pages/svm.js';
 import { renderDataPlayground } from './pages/dataPlayground.js';
 import { renderExplainers } from './pages/explainers.js';
+import { renderFoundations } from './pages/foundations.js';
+import { renderDataBasics } from './pages/dataBasics.js';
+import { renderDataPreprocessing } from './pages/dataPreprocessing.js';
+import { renderModelEvaluation } from './pages/modelEvaluation.js';
+import { renderBasicMath } from './pages/basicMath.js';
+import { renderMLWorkflow } from './pages/mlWorkflow.js';
+import { renderLossFunction } from './pages/lossFunction.js';
+import { renderGradientDescent } from './pages/gradientDescent.js';
+import { renderKNN } from './pages/knn.js';
+import { renderLogisticRegression } from './pages/logisticRegression.js';
+import { renderModelMetrics } from './pages/modelMetrics.js';
 import { renderPricing } from './pages/pricing.js';
 import { renderLogin } from './pages/login.js';
 
@@ -18,6 +29,17 @@ const routes = {
   'neural-network': { render: renderNeuralNetwork, title: 'Neural Networks', breadcrumb: 'Algorithms → Neural Networks' },
   svm: { render: renderSVM, title: 'SVM', breadcrumb: 'Algorithms → Support Vector Machines' },
   'data-playground': { render: renderDataPlayground, title: 'Data Playground', breadcrumb: 'Tools → Data Playground' },
+  foundations: { render: renderFoundations, title: 'Foundations', breadcrumb: 'Course → Foundations' },
+  'data-basics': { render: renderDataBasics, title: 'Data Basics', breadcrumb: 'Course → Data Basics' },
+  'data-preprocessing': { render: renderDataPreprocessing, title: 'Data Preprocessing', breadcrumb: 'Course → Data Preprocessing' },
+  'model-evaluation': { render: renderModelEvaluation, title: 'Model Evaluation', breadcrumb: 'Course → Model Evaluation' },
+  'basic-math': { render: renderBasicMath, title: 'Basic Mathematics', breadcrumb: 'Course → Basic Mathematics' },
+  'ml-workflow': { render: renderMLWorkflow, title: 'ML Workflow', breadcrumb: 'Course → ML Workflow' },
+  'loss-function': { render: renderLossFunction, title: 'Loss Functions', breadcrumb: 'Course → Loss Functions' },
+  'gradient-descent': { render: renderGradientDescent, title: 'Gradient Descent', breadcrumb: 'Course → Gradient Descent' },
+  knn: { render: renderKNN, title: 'K-Nearest Neighbors', breadcrumb: 'Algorithms → KNN' },
+  'logistic-regression': { render: renderLogisticRegression, title: 'Logistic Regression', breadcrumb: 'Algorithms → Logistic Regression' },
+  'model-metrics': { render: renderModelMetrics, title: 'Model Metrics', breadcrumb: 'Course → Model Metrics' },
   explainers: { render: renderExplainers, title: 'Explainers', breadcrumb: 'Learn → Why Did This Happen?' },
   pricing: { render: renderPricing, title: 'Pricing', breadcrumb: 'Pricing' },
   login: { render: renderLogin, title: 'Login', breadcrumb: 'Login' }

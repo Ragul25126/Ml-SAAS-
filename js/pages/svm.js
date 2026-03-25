@@ -20,7 +20,7 @@ export function renderSVM(container) {
 
     <div class="page-header">
 
-      <span class="lesson-number">Lesson 5 — Classification</span>
+      <span class="lesson-number">Algorithm — Support Vector Machines</span>
 
       <h2>Support Vector Machines</h2>
 
@@ -127,101 +127,60 @@ sv = model.support_vectors_</pre>
 
 
     <div class="steps-section">
-
       <div class="steps-header">
-
-        <span class="steps-badge">📚 How It Works</span>
-
-        <h3>Support Vector Machines — Step by Step</h3>
-
-        <p>Understanding how SVM finds the optimal boundary with maximum margin</p>
-
+        <span class="steps-badge">⚔️ The Wide Street</span>
+        <h3>SVM: The Ultimate Boundary</h3>
+        <p>Support Vector Machines don't just find a boundary; they find the biggest, safest "No-Man's Land" between classes.</p>
       </div>
 
       <div class="steps-grid">
 
         <div class="step-card">
-
           <div class="step-number">1</div>
-
-          <div class="step-icon">📦</div>
-
-          <div class="step-title">Training vs Testing</div>
-
-          <div class="step-body">SVM is a <strong>supervised classifier</strong>. It learns a decision boundary from labeled training examples (class 0 or class 1). At test time, new points are classified based on which side of the boundary they fall on.</div>
-
-          <div class="step-formula">Train: find hyperplane | Test: classify(x) = sign(w·x + b)</div>
-
+          <div class="step-icon">🗺️</div>
+          <div class="step-title">Creating the No-Man's Land</div>
+          <div class="step-body">Imagine two rival groups. SVM doesn't just draw a thin line between them; it tries to build a <strong>wide street</strong> (the Margin). The goal is to keep the street as empty as possible for maximum safety.</div>
+          <div class="step-formula">Goal → Maximize the Margin</div>
         </div>
 
         <div class="step-card">
-
           <div class="step-number">2</div>
-
-          <div class="step-icon">🎲</div>
-
-          <div class="step-title">Initialize Weights</div>
-
-          <div class="step-body">SVM starts with a weight vector <strong>w = 0</strong> and bias <strong>b = 0</strong>. This corresponds to an untrained boundary. The iterative training steps will move it to the optimal position.</div>
-
-          <div class="step-formula">w = [0, 0],  b = 0</div>
-
+          <div class="step-icon">🥋</div>
+          <div class="step-title">The Street Fighters</div>
+          <div class="step-body">Not every point matters! Only the points closest to the "street" are important. These are the <strong>Support Vectors</strong>. They are the tough guys holding up the boundary. If they move, the street moves.</div>
+          <div class="step-formula">Highlighted in Gold on Canvas</div>
         </div>
 
         <div class="step-card">
-
           <div class="step-number">3</div>
-
-          <div class="step-icon">🔮</div>
-
-          <div class="step-title">Predict (Score Each Point)</div>
-
-          <div class="step-body">For each sample x, SVM computes a <strong>decision score</strong>. Points with score &gt; 0 are Class 1, those &lt; 0 are Class 0. Points near zero are the hardest to classify — they live close to the margin boundary.</div>
-
-          <div class="step-formula">score(x) = w·x + b</div>
-
+          <div class="step-icon">📏</div>
+          <div class="step-title">Widening the Gap</div>
+          <div class="step-body">The algorithm uses math to push the boundary as far away from both classes as possible. This "social distancing" ensures that when new data arrives, it's less likely to be on the wrong side.</div>
+          <div class="step-formula">Formula: w·x + b = 0</div>
         </div>
 
         <div class="step-card">
-
           <div class="step-number">4</div>
-
-          <div class="step-icon">📉</div>
-
-          <div class="step-title">Calculate Hinge Loss</div>
-
-          <div class="step-body"><strong>Hinge loss</strong> penalizes misclassified points AND correctly-classified points too close to the boundary. The C parameter balances the penalty — high C focuses on correct classification, low C prioritizes a wide margin.</div>
-
-          <div class="step-formula">L = max(0, 1 − y·(w·x + b)) + λ‖w‖²</div>
-
+          <div class="step-icon">🥨</div>
+          <div class="step-title">Dealing with Rule-Breakers</div>
+          <div class="step-body">Sometimes data is messy and a point lands on the wrong side of the street. The <strong>C Parameter</strong> controls how much we "relax" the rules. High C = zero tolerance; Low C = okay with some mistakes to keep the street wide.</div>
+          <div class="step-formula">C = Penalty for misclassification</div>
         </div>
 
         <div class="step-card">
-
           <div class="step-number">5</div>
-
-          <div class="step-icon">⬇️</div>
-
-          <div class="step-title">Update Weights</div>
-
-          <div class="step-body">For each misclassified or marginal point, w and b are nudged to increase the margin. <strong>Support vectors</strong> (circled in gold) are the only examples that actually influence the boundary — the rest have no effect!</div>
-
-          <div class="step-formula">w ← w − α(∂L/∂w) | b ← b − α(∂L/∂b)</div>
-
+          <div class="step-icon">🛡️</div>
+          <div class="step-title">The Safety Buffer</div>
+          <div class="step-body">When classifying a new point, we see which side of the street it's on. The further it is from the center of the street, the more "confident" we are in our prediction.</div>
+          <div class="step-formula">Confidence ∝ Distance from Hyperplane</div>
         </div>
 
         <div class="step-card">
-
           <div class="step-number">6</div>
-
-          <div class="step-icon">🔁</div>
-
-          <div class="step-title">Repeat — Maximize the Margin</div>
-
-          <div class="step-body">Training repeats until the <strong>margin</strong> (gap between dotted lines) is maximized. A wider margin means better generalization on unseen data. SVM is powerful because only support vectors matter!</div>
-
-          <div class="step-formula">Margin = 2 / ‖w‖ → maximize by minimizing ‖w‖</div>
-
+          <div class="step-icon">✨</div>
+          <div class="step-title">Kernel Magic (Advanced)</div>
+          <div class="step-body">If the groups are mixed up and no straight street can separate them, SVM uses a "Kernel Trick" to lift the data into a higher dimension (like throwing it in the air) until a clean separation becomes possible!</div>
+          <div class="step-formula">Non-linear: RBF / Polynomial Kernels</div>
         </div>
 
       </div>

@@ -65,8 +65,8 @@ export function renderDashboard(container) {
       <div class="glass-card stat-card">
         <div class="stat-icon blue">📊</div>
         <div class="stat-content">
-          <h4 class="stat-num" data-target="5">0</h4>
-          <p>Interactive Algorithms</p>
+        <h4 class="stat-num" data-target="16">0</h4>
+          <p>Interactive Modules</p>
         </div>
         <div class="stat-trend up">+2 new</div>
       </div>
@@ -74,7 +74,7 @@ export function renderDashboard(container) {
       <div class="glass-card stat-card">
         <div class="stat-icon emerald">🌎</div>
         <div class="stat-content">
-          <h4 class="stat-num" data-target="6">0</h4>
+          <h4 class="stat-num" data-target="9">0</h4>
           <p>Sample Datasets</p>
         </div>
         <div class="stat-trend up">+1 new</div>
@@ -103,17 +103,17 @@ export function renderDashboard(container) {
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;">
         <div>
           <div style="font-size:0.95rem;font-weight:800;letter-spacing:-0.02em;">Your Progress</div>
-          <div style="font-size:0.78rem;color:var(--text-muted);margin-top:2px;">0 of 5 modules completed</div>
+          <div style="font-size:0.78rem;color:var(--text-muted);margin-top:2px;">0 of 16 modules completed</div>
         </div>
         <span class="tag tag-emerald" style="padding: 4px 12px; font-size: 0.75rem;">0%</span>
       </div>
 
-      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:12px;">
-        ${['Linear Regression','K-Means','Decision Trees','Neural Nets','SVM'].map((mod, i) => `
-          <div>
-            <div style="font-size:0.7rem;color:var(--text-secondary);font-weight:600;margin-bottom:8px;text-align:center;">${mod}</div>
-            <div class="progress-bar" style="height: 6px; background: rgba(255,255,255,0.04);">
-              <div class="progress-fill" style="width:0%;background:${['var(--accent-emerald)','var(--gradient-success)','var(--gradient-warm)','linear-gradient(135deg,#34d399,#d4d4d8)','var(--gradient-cool)'][i]}"></div>
+      <div style="display:grid;grid-template-columns:repeat(16,1fr);gap:6px;">
+        ${['L1','L2','L3','L4','L5','L6','L7','L8','L9','L10','L11','L12','L13','L14','L15','L16'].map((mod, i) => `
+          <div title="${['Foundations','Data Basics','Preprocessing','Evaluation','Basic Math','ML Workflow','Loss','Gradient','Linear Reg','Logit Reg','KNN','Metrics','K-Means','Decision Trees','Neural Nets','SVM'][i]}">
+            <div style="font-size:0.6rem;color:var(--text-secondary);font-weight:600;margin-bottom:4px;text-align:center;">${mod}</div>
+            <div class="progress-bar" style="height: 5px; background: rgba(255,255,255,0.04); border-radius: 3px;">
+              <div class="progress-fill" style="width:0%;background:${['var(--accent-cyan)','var(--accent-emerald)','var(--accent-emerald)','var(--gradient-success)','var(--gradient-success)','var(--gradient-success)','var(--gradient-success)','var(--accent-amber)','var(--accent-amber)','var(--accent-amber)','var(--accent-emerald)','var(--accent-emerald)','var(--gradient-warm)','var(--gradient-warm)','linear-gradient(135deg,#34d399,#d4d4d8)','var(--gradient-cool)'][i]}"></div>
             </div>
           </div>
         `).join('')}
@@ -143,182 +143,244 @@ export function renderDashboard(container) {
 
     <div class="lesson-grid">
 
-      <div class="glass-card lesson-card" data-page="linear-regression" data-level="beginner">
-
-        <div class="lesson-card-preview" style="background:linear-gradient(135deg, rgba(255,255,255,0.18), rgba(212,212,216,0.12));">
-
-          <canvas id="preview-lr" width="320" height="148"></canvas>
-
+      <div class="glass-card lesson-card" data-page="foundations" data-level="beginner">
+        <div class="lesson-card-preview" style="background:linear-gradient(135deg, rgba(6,182,212,0.18), rgba(212,212,216,0.12));">
+          <div style="display:flex;align-items:center;justify-content:center;height:100%;font-size:2.8rem;position:relative;z-index:1;">📖</div>
         </div>
-
         <div class="lesson-card-body">
-
           <span class="lesson-tag beginner">Beginner</span>
-
-          <h4>Linear Regression</h4>
-
-          <p>Learn how a line fits data points and watch gradient descent optimize step by step.</p>
-
+          <h4>Chapter 1: Foundations</h4>
+          <p>What is AI/ML? Learn the basics, types of machine learning, and how models think.</p>
           <div class="lesson-card-footer">
-
             <span class="lesson-duration">⏱ ~10 min</span>
-
-            <span class="btn btn-secondary lesson-cta">Start Lesson →</span>
-
+            <span class="btn btn-secondary lesson-cta">Start Here →</span>
           </div>
-
         </div>
-
       </div>
 
+      <div class="glass-card lesson-card" data-page="data-basics" data-level="beginner">
+        <div class="lesson-card-preview" style="background:linear-gradient(135deg, rgba(0,255,157,0.15), rgba(212,212,216,0.12));">
+          <div style="display:flex;align-items:center;justify-content:center;height:100%;font-size:2.8rem;position:relative;z-index:1;">📊</div>
+        </div>
+        <div class="lesson-card-body">
+          <span class="lesson-tag beginner">Beginner</span>
+          <h4>Chapter 2: Data Basics</h4>
+          <p>Learn about features, targets, and how we split data for training and testing.</p>
+          <div class="lesson-card-footer">
+            <span class="lesson-duration">⏱ ~12 min</span>
+            <span class="btn btn-secondary lesson-cta">Start Lesson →</span>
+          </div>
+        </div>
+      </div>
 
+      <div class="glass-card lesson-card" data-page="data-preprocessing" data-level="beginner">
+        <div class="lesson-card-preview" style="background:linear-gradient(135deg, rgba(236,72,153,0.15), rgba(212,212,216,0.12));">
+          <div style="display:flex;align-items:center;justify-content:center;height:100%;font-size:2.8rem;position:relative;z-index:1;">📈</div>
+        </div>
+        <div class="lesson-card-body">
+          <span class="lesson-tag beginner">Beginner</span>
+          <h4>Chapter 3: Data Preprocessing</h4>
+          <p>Learn how to handle missing values, encode categories, and scale features.</p>
+          <div class="lesson-card-footer">
+            <span class="lesson-duration">⏱ ~12 min</span>
+            <span class="btn btn-secondary lesson-cta">Start Lesson →</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass-card lesson-card" data-page="model-evaluation" data-level="beginner">
+        <div class="lesson-card-preview" style="background:linear-gradient(135deg, rgba(6,182,212,0.15), rgba(212,212,216,0.12));">
+          <div style="display:flex;align-items:center;justify-content:center;height:100%;font-size:2.8rem;position:relative;z-index:1;">🧪</div>
+        </div>
+        <div class="lesson-card-body">
+          <span class="lesson-tag beginner">Beginner</span>
+          <h4>Chapter 4: Model Evaluation</h4>
+          <p>Master the train/test split and learn to identify overfitting vs underfitting.</p>
+          <div class="lesson-card-footer">
+            <span class="lesson-duration">⏱ ~15 min</span>
+            <span class="btn btn-secondary lesson-cta">Start Lesson →</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass-card lesson-card" data-page="basic-math" data-level="beginner">
+        <div class="lesson-card-preview" style="background:linear-gradient(135deg, rgba(245,158,11,0.15), rgba(212,212,216,0.12));">
+          <div style="display:flex;align-items:center;justify-content:center;height:100%;font-size:2.8rem;position:relative;z-index:1;">➕</div>
+        </div>
+        <div class="lesson-card-body">
+          <span class="lesson-tag beginner">Beginner</span>
+          <h4>Chapter 5: Basic Mathematics</h4>
+          <p>Mean, median, probability and linear equations — the simple math that powers ML models.</p>
+          <div class="lesson-card-footer">
+            <span class="lesson-duration">⏱ ~12 min</span>
+            <span class="btn btn-secondary lesson-cta">Start Lesson →</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass-card lesson-card" data-page="ml-workflow" data-level="beginner">
+        <div class="lesson-card-preview" style="background:linear-gradient(135deg, rgba(244,114,182,0.15), rgba(52,211,153,0.12));">
+          <div style="display:flex;align-items:center;justify-content:center;height:100%;font-size:2.8rem;position:relative;z-index:1;">🔄</div>
+        </div>
+        <div class="lesson-card-body">
+          <span class="lesson-tag beginner">Beginner</span>
+          <h4>Chapter 6: ML Workflow</h4>
+          <p>Watch the training loop live — prediction line moves, error drops, model learns.</p>
+          <div class="lesson-card-footer">
+            <span class="lesson-duration">⏱ ~12 min</span>
+            <span class="btn btn-secondary lesson-cta">Start Lesson →</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass-card lesson-card" data-page="loss-function" data-level="beginner">
+        <div class="lesson-card-preview" style="background:linear-gradient(135deg, rgba(244,63,94,0.15), rgba(212,212,216,0.12));">
+          <div style="display:flex;align-items:center;justify-content:center;height:100%;font-size:2.8rem;position:relative;z-index:1;">📉</div>
+        </div>
+        <div class="lesson-card-body">
+          <span class="lesson-tag beginner">Beginner</span>
+          <h4>Chapter 7: Loss Functions</h4>
+          <p>What is "Error"? Visualize distances and see how MSE/MAE measure model performance.</p>
+          <div class="lesson-card-footer">
+            <span class="lesson-duration">⏱ ~8 min</span>
+            <span class="btn btn-secondary lesson-cta">Start Lesson →</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass-card lesson-card" data-page="gradient-descent" data-level="beginner">
+        <div class="lesson-card-preview" style="background:linear-gradient(135deg, rgba(245,158,11,0.15), rgba(212,212,216,0.12));">
+          <div style="display:flex;align-items:center;justify-content:center;height:100%;font-size:2.8rem;position:relative;z-index:1;">⛰️</div>
+        </div>
+        <div class="lesson-card-body">
+          <span class="lesson-tag beginner">Beginner</span>
+          <h4>Chapter 8: Gradient Descent</h4>
+          <p>The ball rolling down the hill. Watch optimization live and master the learning rate.</p>
+          <div class="lesson-card-footer">
+            <span class="lesson-duration">⏱ ~10 min</span>
+            <span class="btn btn-secondary lesson-cta">Start Lesson →</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass-card lesson-card" data-page="linear-regression" data-level="beginner">
+        <div class="lesson-card-preview" style="background:linear-gradient(135deg, rgba(255,255,255,0.18), rgba(212,212,216,0.12));">
+          <canvas id="preview-lr" width="320" height="148"></canvas>
+        </div>
+        <div class="lesson-card-body">
+          <span class="lesson-tag beginner">Beginner</span>
+          <h4>Chapter 9: Linear Regression</h4>
+          <p>Learn how a line fits data points and watch gradient descent optimize step by step.</p>
+          <div class="lesson-card-footer">
+            <span class="lesson-duration">⏱ ~10 min</span>
+            <span class="btn btn-secondary lesson-cta">Start Lesson →</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass-card lesson-card" data-page="logistic-regression" data-level="intermediate">
+        <div class="lesson-card-preview" style="background:linear-gradient(135deg, rgba(6,182,212,0.15), rgba(212,212,216,0.12));">
+          <div style="display:flex;align-items:center;justify-content:center;height:100%;font-size:2.8rem;position:relative;z-index:1;">📈</div>
+        </div>
+        <div class="lesson-card-body">
+          <span class="lesson-tag intermediate">Intermediate</span>
+          <h4>Chapter 10: Logistic Regression</h4>
+          <p>Moving from lines to S-curves. Learn classification and the Sigmoid function.</p>
+          <div class="lesson-card-footer">
+            <span class="lesson-duration">⏱ ~12 min</span>
+            <span class="btn btn-secondary lesson-cta">Start Lesson →</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass-card lesson-card" data-page="knn" data-level="beginner">
+        <div class="lesson-card-preview" style="background:linear-gradient(135deg, rgba(161,161,170,0.15), rgba(212,212,216,0.12));">
+          <div style="display:flex;align-items:center;justify-content:center;height:100%;font-size:2.8rem;position:relative;z-index:1;">👥</div>
+        </div>
+        <div class="lesson-card-body">
+          <span class="lesson-tag beginner">Beginner</span>
+          <h4>Chapter 11: K-Nearest Neighbors</h4>
+          <p>Birds of a feather. Predict labels based on the closest neighbors in the data.</p>
+          <div class="lesson-card-footer">
+            <span class="lesson-duration">⏱ ~10 min</span>
+            <span class="btn btn-secondary lesson-cta">Start Lesson →</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass-card lesson-card" data-page="model-metrics" data-level="intermediate">
+        <div class="lesson-card-preview" style="background:linear-gradient(135deg, rgba(34,197,94,0.15), rgba(212,212,216,0.12));">
+          <div style="display:flex;align-items:center;justify-content:center;height:100%;font-size:2.8rem;position:relative;z-index:1;">🎯</div>
+        </div>
+        <div class="lesson-card-body">
+          <span class="lesson-tag intermediate">Intermediate</span>
+          <h4>Chapter 12: Model Evaluation</h4>
+          <p>Accuracy, Precision, Recall, and the Confusion Matrix. Master the metrics.</p>
+          <div class="lesson-card-footer">
+            <span class="lesson-duration">⏱ ~12 min</span>
+            <span class="btn btn-secondary lesson-cta">Start Lesson →</span>
+          </div>
+        </div>
+      </div>
 
       <div class="glass-card lesson-card" data-page="k-means" data-level="beginner">
-
         <div class="lesson-card-preview" style="background:linear-gradient(135deg, rgba(161,161,170,0.18), rgba(6,182,212,0.12));">
-
           <canvas id="preview-km" width="320" height="148"></canvas>
-
         </div>
-
         <div class="lesson-card-body">
-
           <span class="lesson-tag beginner">Beginner</span>
-
-          <h4>K-Means Clustering</h4>
-
+          <h4>Chapter 13: K-Means Clustering</h4>
           <p>See how clusters form as centroids move iteration by iteration towards convergence.</p>
-
           <div class="lesson-card-footer">
-
             <span class="lesson-duration">⏱ ~8 min</span>
-
             <span class="btn btn-secondary lesson-cta">Start Lesson →</span>
-
           </div>
-
         </div>
-
       </div>
-
-
 
       <div class="glass-card lesson-card" data-page="decision-tree" data-level="intermediate">
-
         <div class="lesson-card-preview" style="background:linear-gradient(135deg, rgba(245,158,11,0.18), rgba(244,63,94,0.12));">
-
           <canvas id="preview-dt" width="320" height="148"></canvas>
-
         </div>
-
         <div class="lesson-card-body">
-
           <span class="lesson-tag intermediate">Intermediate</span>
-
-          <h4>Decision Trees</h4>
-
+          <h4>Chapter 14: Decision Trees</h4>
           <p>Visualize how trees split data and create human-readable decision boundaries.</p>
-
           <div class="lesson-card-footer">
-
             <span class="lesson-duration">⏱ ~12 min</span>
-
             <span class="btn btn-secondary lesson-cta">Start Lesson →</span>
-
           </div>
-
         </div>
-
       </div>
-
-
 
       <div class="glass-card lesson-card" data-page="neural-network" data-level="advanced">
-
         <div class="lesson-card-preview" style="background:linear-gradient(135deg, rgba(236,72,153,0.18), rgba(212,212,216,0.12));">
-
           <canvas id="preview-nn" width="320" height="148"></canvas>
-
         </div>
-
         <div class="lesson-card-body">
-
           <span class="lesson-tag advanced">Advanced</span>
-
-          <h4>Neural Networks</h4>
-
+          <h4>Chapter 15: Neural Networks</h4>
           <p>Watch activations flow through layers and weights update during backpropagation.</p>
-
           <div class="lesson-card-footer">
-
             <span class="lesson-duration">⏱ ~15 min</span>
-
             <span class="btn btn-secondary lesson-cta">Start Lesson →</span>
-
           </div>
-
         </div>
-
       </div>
-
-
 
       <div class="glass-card lesson-card" data-page="svm" data-level="intermediate">
-
         <div class="lesson-card-preview" style="background:linear-gradient(135deg, rgba(6,182,212,0.18), rgba(255,255,255,0.12));">
-
           <canvas id="preview-svm" width="320" height="148"></canvas>
-
         </div>
-
         <div class="lesson-card-body">
-
           <span class="lesson-tag intermediate">Intermediate</span>
-
-          <h4>Support Vector Machines</h4>
-
+          <h4>Chapter 16: Support Vector Machines</h4>
           <p>Find the optimal separating hyperplane and see support vectors in action.</p>
-
           <div class="lesson-card-footer">
-
             <span class="lesson-duration">⏱ ~10 min</span>
-
             <span class="btn btn-secondary lesson-cta">Start Lesson →</span>
-
           </div>
-
         </div>
-
-      </div>
-
-
-
-      <div class="glass-card lesson-card" data-page="explainers" data-level="beginner">
-
-        <div class="lesson-card-preview" style="background:linear-gradient(135deg, rgba(244,63,94,0.18), rgba(245,158,11,0.12));">
-
-          <div style="display:flex;align-items:center;justify-content:center;height:100%;font-size:2.8rem;position:relative;z-index:1;animation:floatY 3s ease-in-out infinite;">🤔</div>
-
-        </div>
-
-        <div class="lesson-card-body">
-
-          <span class="lesson-tag beginner">Beginner</span>
-
-          <h4>Why Did This Happen?</h4>
-
-          <p>Interactive explainers for overfitting, learning rates, bias-variance tradeoff, and more.</p>
-
-          <div class="lesson-card-footer">
-
-            <span class="lesson-duration">⏱ ~10 min</span>
-
-            <span class="btn btn-secondary lesson-cta">Explore →</span>
-
-          </div>
-
-        </div>
-
       </div>
 
     </div>
