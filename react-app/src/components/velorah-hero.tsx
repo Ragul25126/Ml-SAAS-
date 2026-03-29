@@ -32,17 +32,17 @@ export default function VelorahHero() {
 
       {/* Hero Content */}
       <main className="relative z-10 flex flex-col items-center justify-center text-center px-6 pt-32 pb-40 min-h-[calc(100vh-100px)]">
-        <h1 
+        <h1
           className="animate-fade-rise text-5xl sm:text-7xl md:text-8xl leading-[0.95] tracking-[-2.46px] max-w-7xl font-normal text-foreground"
           style={{ fontFamily: "var(--font-display)" }}
         >
           Stop <em className="not-italic text-muted-foreground">memorizing.</em><br /> Start <em className="not-italic text-muted-foreground">seeing algorithms.</em>
         </h1>
-        
+
         <p className="animate-fade-rise-delay text-muted-foreground text-base sm:text-lg max-w-2xl mt-8 leading-relaxed">
-          We transform complex machine learning mathematics into intuitive, real-time visual experiences. Stop calculating blindly—start understanding deeply.
+          We transform complex machine learning mathematics into intuitive, real time visual experiences. Stop calculating blindly start understanding deeply.
         </p>
-        
+
         <a href="/app.html" className="animate-fade-rise-delay-2 liquid-glass rounded-full px-14 py-5 text-base text-foreground mt-12 hover:scale-[1.03] transition-transform cursor-pointer inline-block text-center">
           Enter the Lab
         </a>
