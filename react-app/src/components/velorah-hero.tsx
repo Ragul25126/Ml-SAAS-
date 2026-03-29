@@ -17,7 +17,7 @@ export default function VelorahHero() {
       {/* Navigation Bar */}
       <nav className="relative z-10 flex flex-row items-center justify-between px-8 py-6 max-w-7xl mx-auto">
         <div style={{ fontFamily: "var(--font-display)" }} className="text-3xl tracking-tight text-foreground">
-          ML Viz Lab<sup className="text-xs font-sans">®</sup>
+          ML Viz Lab
         </div>
         <div className="hidden md:flex items-center gap-8">
           <a href="#" className="text-sm text-foreground transition-colors">Home</a>
