@@ -272,6 +272,16 @@ centroids = kmeans.cluster_centers_</pre>
   setTimeout(resizeCanvas, 50);
   window.addEventListener('resize', resizeCanvas);
 
+  // Auto-play logic
+  const isAutoplay = localStorage.getItem('mlviz_autoplay') !== 'false'; // default true
+  if (isAutoplay) {
+    setTimeout(() => {
+      if (!isTraining) {
+        document.getElementById('btn-run').click();
+      }
+    }, 1500);
+  }
+
   // Quiz
   renderQuiz(container, QUIZ_DATA.kMeans);
 
